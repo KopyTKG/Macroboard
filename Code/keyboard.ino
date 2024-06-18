@@ -8,8 +8,6 @@ const char keys[5][4] = {
   {KEY_RETURN, '.', 0x00, '0'}  // Use ASCII for '.', KEY_RETURN for Enter
 };
 
-1326469879
-
 const char functionKeys[5][4] = {
   {'-', '*', '/', KEY_NUM_LOCK},  // Same as the first row in keys
   {0x00, KEY_F14, KEY_F15, KEY_F13}, // Replacing numbers 9, 8, 7 with F14, F15, F13
