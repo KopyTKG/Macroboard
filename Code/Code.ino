@@ -1,15 +1,19 @@
 #include <Keyboard.h>
 #include "headers/keymaps.h"
+#include "headers/config.h"
 
+/*
+ Created by: 	KopyTKG
+ Date:		2024-06-20
+ License:	CC0 v1.0
+*/
+
+
+// Layout counter
 int Layout = 0;
-
+// Key state array
 bool keyStates[5][4] = {0};
 
-const int LEDs[2] = {15, 16};
-
-// Pin configuration
-const int columnPins[4] = {2, 4, 7, 8};
-const int rowPins[5] = {3, 5, 6, 9, 10};
 
 void setup() {
   // Initialize column pins
@@ -62,17 +66,22 @@ void loop() {
       bool active = digitalRead(columnPins[j]); // Active HIGH
 
       if (active && !keyStates[i][j]) {
+
+      	// Check if the key is a Macro Switch
         if(i==0 && j == 3) {
-          if(Layout < 3) {
+          if(Layout < keyLayoutCap - 1) {
 	    Layout++;
 	  } else {
 	    Layout = 0;
 	  }
         }
+	
+	// Use function keys if the layout is not the default
         else if (FunctionLayout[i][j] != 0x00 && Layout > 0) { // Check if the key is not null
 	  Keyboard.press(PrefixKeys[Layout]);
           Keyboard.press(FunctionLayout[i][j]);
         }
+	// Use numeric keys if the layout is the default
         else if (DefaultLayout[i][j] != 0x00 && Layout == 0) { // Check if the key is not null
           Keyboard.press(DefaultLayout[i][j]);
         }
