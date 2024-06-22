@@ -412,7 +412,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "0a2c7b5e-fd99-45bd-b67a-369cf00f9e30")
 			(effects
@@ -423,7 +423,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2c135901-aac3-41cb-9055-cd02f013f659")
@@ -435,7 +435,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "459fe20c-37cf-4287-b685-bb3cc3c85a73")
@@ -447,7 +447,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7d026c1-279f-4b1c-b9d2-b702389a1a09")
@@ -636,7 +636,7 @@
 			(uuid "473fb842-3dab-4e7f-9900-787b51d69ca1")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "077011d1-4b63-486b-91a4-c8bb491c6eca")
 			(effects
@@ -1185,7 +1185,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "88b57fb3-57ec-4b88-ab80-cd6552dc533d")
 			(effects
@@ -1196,7 +1196,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "485c675f-3815-47e2-8a88-59361e4a00c3")
@@ -1208,7 +1208,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "11205423-46f7-4436-86c5-10bdad8d621b")
@@ -1220,7 +1220,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e33c24f4-13c1-4a75-97c8-d73b55aa4f53")
@@ -1409,7 +1409,7 @@
 			(uuid "ad941e73-e596-4912-ba32-d2c17c7f456c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "5fe0d843-fc12-464c-9e9d-560d332d0298")
 			(effects
@@ -1463,7 +1463,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "c543e871-5c15-4f35-ada2-7d0793069c36")
 			(effects
@@ -1474,7 +1474,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8408d4a2-7c68-4c6b-bae4-4d3bf9b32486")
@@ -1486,7 +1486,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "34512c10-47c4-43cf-9a24-8e1555e70924")
@@ -1498,7 +1498,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4ee3f883-49ed-4c31-86a9-ed770ba767d3")
@@ -1687,7 +1687,7 @@
 			(uuid "c42f98e7-4895-4cd3-ba63-eb320a038aef")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "12779ff4-3f07-4f91-b028-b9aeaa5ed333")
 			(effects
@@ -2013,7 +2013,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "166e4edc-c45c-4838-8d2e-015d7370fc2e")
 			(effects
@@ -2024,7 +2024,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fc0b50fb-8457-462c-9d2b-ab6f87427ec5")
@@ -2036,7 +2036,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b5b35f95-cd17-417f-a892-a7f24dded80b")
@@ -2048,7 +2048,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a44c154d-dbc6-4d41-af39-c7befee32786")
@@ -2237,7 +2237,7 @@
 			(uuid "b236214f-0aee-4010-b38a-305095725875")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "48fd8535-54d4-4420-a5c3-5ad1ebae24e7")
 			(effects
@@ -2291,7 +2291,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "8412868d-b913-4708-8472-0d696dc61f96")
 			(effects
@@ -2302,7 +2302,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "aed6ef2b-ce77-4296-b2ef-8e5290700fca")
@@ -2314,7 +2314,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d8d0a0ee-11de-4e39-b221-38c6a40e311e")
@@ -2326,7 +2326,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4bf46547-7d04-42fa-a29e-d75934cf7576")
@@ -2515,7 +2515,7 @@
 			(uuid "938dd387-3f2e-45c8-b7eb-cc20bb5dc67a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "ddd5f910-6f92-47ad-a78a-f36466ebb22d")
 			(effects
@@ -2569,7 +2569,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "9e8cb1cd-ab8b-49f3-9d6b-a05f915dcc86")
 			(effects
@@ -2580,7 +2580,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a56b710f-f791-49af-b379-a5a0486f3809")
@@ -2592,7 +2592,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cb481b1b-d20e-4a5c-bd6d-6fb7569984fd")
@@ -2604,7 +2604,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b19e5c66-777d-4bf3-8244-7015aeb4df44")
@@ -2793,7 +2793,7 @@
 			(uuid "de591ade-8cb4-41ba-b3f7-64bdad3e591c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "d9ae2c05-27d3-4eff-98f8-6b02374b3311")
 			(effects
@@ -2847,7 +2847,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "1876541b-3739-448c-8f09-cbc622a2cdfb")
 			(effects
@@ -2858,7 +2858,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3fce2fc7-9492-43f7-a82f-d027b6a22389")
@@ -2870,7 +2870,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "398f3e6a-d683-4f94-bccb-c955c9446735")
@@ -2882,7 +2882,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cb201416-dbc1-41b5-af60-3bf435630d4a")
@@ -3071,7 +3071,7 @@
 			(uuid "a11854bd-86ce-493f-8fc4-a1ed064cedf8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "607f80ac-fb68-4879-8508-1e6a63b51fc4")
 			(effects
@@ -3125,7 +3125,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "b43aed85-a61b-401d-a6b9-11ec687e58e5")
 			(effects
@@ -3136,7 +3136,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "077a6034-22bb-43a4-9cce-37e1943c36e0")
@@ -3148,7 +3148,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "158ca18e-73a5-4a7d-950c-17c9935fa000")
@@ -3160,7 +3160,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bf6e3e5e-8889-4d31-ae47-3863a60ce75f")
@@ -3349,7 +3349,7 @@
 			(uuid "cea56b1d-e00a-45cc-becb-4d299eb6fee9")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "71d11fda-03b0-498d-9d97-06de01ccc743")
 			(effects
@@ -3936,7 +3936,7 @@
 		(descr "Diode SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), Alternate KiCad Library")
 		(tags "diode 1210 handsolder")
 		(property "Reference" "LED18"
-			(at 0 2.75 360)
+			(at 0 2.75 0)
 			(layer "F.SilkS")
 			(uuid "6aa60bd3-4c63-4765-95e4-c186778a64b9")
 			(effects
@@ -3947,7 +3947,7 @@
 			)
 		)
 		(property "Value" "D_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
-			(at 0 2.28 360)
+			(at 0 2.28 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "44498506-dab9-4d63-840b-7662fbeda4a7")
@@ -3959,7 +3959,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5bb98f2c-bcad-48f3-96cf-89fc93a5bc5b")
@@ -3971,7 +3971,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4aa013b4-f3eb-45ca-9043-2ca5b9b99071")
@@ -3983,7 +3983,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a498002a-0e83-49b0-998d-6ebf683f01e3")
@@ -4172,7 +4172,7 @@
 			(uuid "93b097a8-bc4a-451b-a6ef-1a53e1aa9935")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "fac5b064-0e3b-4d6f-98ce-d98fd7983105")
 			(effects
@@ -4770,7 +4770,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "2522266c-c8ea-457d-8c5d-5cd81dcb5ee5")
 			(effects
@@ -4781,7 +4781,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "50d99e4b-cb8c-45ba-a6f6-6f98eb952958")
@@ -4793,7 +4793,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "468fbdab-af86-4585-aa73-4b581cd06466")
@@ -4805,7 +4805,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5c892b26-c055-48e4-8130-5529122fc6d8")
@@ -4994,7 +4994,7 @@
 			(uuid "92c50d47-822e-465b-87e6-6c91d3670e88")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e4343f40-ac7e-4c43-9487-88411972efb1")
 			(effects
@@ -5048,7 +5048,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "4635a34c-b7cb-4d8f-9b70-117ca2109da7")
 			(effects
@@ -5059,7 +5059,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "743a969e-962d-46a2-b0cf-eaf7e46fee1a")
@@ -5071,7 +5071,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b488584d-79ce-4c15-970f-325f1ad3f293")
@@ -5083,7 +5083,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b0df3f26-7eb1-4b8e-9e6d-eaf18ebd2d83")
@@ -5272,7 +5272,7 @@
 			(uuid "288746a9-1cff-4d17-8c35-437ebbaf7bc0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "df4e41dc-132b-424f-ae28-45227987b775")
 			(effects
@@ -5326,7 +5326,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "d68fc099-bb99-471d-bc48-bf02330b732a")
 			(effects
@@ -5337,7 +5337,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c994a9f7-5275-4f9d-a64a-2e1d5e17f212")
@@ -5349,7 +5349,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1865e79e-40b0-4647-9eca-dd518429d07f")
@@ -5361,7 +5361,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "95fa36be-adb2-462b-a556-b84251c48ae5")
@@ -5550,7 +5550,7 @@
 			(uuid "05b6a264-87ea-45ba-a1b8-ef7f85ee4f52")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "1096cb48-f96f-43b0-ad21-ad2df24b9390")
 			(effects
@@ -5604,7 +5604,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "64767d15-bc0b-4835-a683-4f60791047ba")
 			(effects
@@ -5615,7 +5615,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ec05b3cf-7f6f-4883-ad19-718b01d62d7e")
@@ -5627,7 +5627,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c82e65c3-baa9-4b63-b1eb-ef3d341afb0e")
@@ -5639,7 +5639,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c87fa022-0b2a-40a7-9d9b-6dcc720d4243")
@@ -5828,7 +5828,7 @@
 			(uuid "7945719e-4300-4ecc-bdfe-74f81583e4e4")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "dd60d10f-c16b-49ed-afd8-4b8915018686")
 			(effects
@@ -7454,7 +7454,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "ac609e65-c8af-43d6-bdd8-063ce1f1ba8f")
 			(effects
@@ -7465,7 +7465,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1d94634f-df5a-42e6-947a-53ff6e85207d")
@@ -7477,7 +7477,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a6ba511d-bf4e-4dcc-a1be-c627bdee4549")
@@ -7489,7 +7489,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ae404502-828b-4238-9f8a-a3139458d9ca")
@@ -7678,7 +7678,7 @@
 			(uuid "a4a0faa6-c162-4216-a311-1e1bba99cc19")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "4ef71060-5e93-41a5-a419-b9d4bd2d8565")
 			(effects
@@ -7721,7 +7721,7 @@
 		(descr "Diode SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), Alternate KiCad Library")
 		(tags "diode 1210 handsolder")
 		(property "Reference" "LED19"
-			(at 0 2.75 360)
+			(at 0 2.75 0)
 			(layer "F.SilkS")
 			(uuid "623407dc-59e4-4064-b295-ad64e9217dd9")
 			(effects
@@ -7732,7 +7732,7 @@
 			)
 		)
 		(property "Value" "D_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
-			(at 0 2.28 360)
+			(at 0 2.28 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "188b7c08-a20e-4150-afe5-d485b547a66c")
@@ -7744,7 +7744,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "daed86aa-ae1d-420a-a295-e9496afb9caa")
@@ -7756,7 +7756,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df665455-a058-4575-9e91-cc3db543c76d")
@@ -7768,7 +7768,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1392e4de-38f9-4e75-81d8-d7316e0cfa63")
@@ -7957,7 +7957,7 @@
 			(uuid "1a232d93-936e-4490-94c1-1d8e66105c7b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "1ed51d72-1f22-4503-b668-4ff0e213330f")
 			(effects
@@ -8555,7 +8555,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "d914bf7e-d38a-4f6b-9912-2f23969728ab")
 			(effects
@@ -8566,7 +8566,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "48827e3f-c5c2-4c62-bdcd-be85cebb5f16")
@@ -8578,7 +8578,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c8c4c61d-7ef4-4ab3-a289-87f2f9579e3e")
@@ -8590,7 +8590,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "96ca99c6-4a43-4985-94ba-a68e4cc5ba20")
@@ -8779,7 +8779,7 @@
 			(uuid "e4812856-5f4b-4cbb-8781-ed8f66213c56")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e44c170b-7957-4abc-b53b-d8eba522a38b")
 			(effects
@@ -8833,7 +8833,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "3374e50c-41c7-40c7-915c-70d11d863acd")
 			(effects
@@ -8844,7 +8844,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3256671d-928f-454f-b7f5-fb5c51c0521d")
@@ -8856,7 +8856,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9211084b-0e30-41a2-a857-2a9c538c1b16")
@@ -8868,7 +8868,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df11dcee-48a3-493f-b985-ab9cc7bd2dcd")
@@ -9057,7 +9057,7 @@
 			(uuid "ab5adfe9-f52e-4354-a5e9-f805d139bca3")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "863a92f1-219b-4830-976a-e8c0ba762c08")
 			(effects
@@ -9531,7 +9531,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "c5795591-9013-4654-8054-81174321e6fa")
 			(effects
@@ -9542,7 +9542,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "85a73065-4b9d-4212-8933-1a8da5fdb0b7")
@@ -9554,7 +9554,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "917add45-d351-4fef-9d60-0ca18c953fca")
@@ -9566,7 +9566,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c45824e0-1827-4991-b8fd-f257fde8ee36")
@@ -9755,7 +9755,7 @@
 			(uuid "fcefe805-0bc0-4cca-9ae9-4cfb42a32c20")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "8e6b7aa4-53b4-464c-85ac-742901cd9e86")
 			(effects
@@ -9798,7 +9798,7 @@
 		(descr "Diode SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), Alternate KiCad Library")
 		(tags "diode 1206 handsolder")
 		(property "Reference" "D1"
-			(at 0 -2.159 360)
+			(at 0 -2.159 0)
 			(layer "F.SilkS")
 			(uuid "f8967062-9b9f-4d0a-bb18-a46b34fef98e")
 			(effects
@@ -9809,7 +9809,7 @@
 			)
 		)
 		(property "Value" "D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 1.82 360)
+			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "70faa300-f06a-48ff-8c98-9e7e0d11d62e")
 			(effects
@@ -9820,7 +9820,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Diode_SMD_AKL:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f0515a8b-0c95-4a4b-b314-e960caef9fee")
@@ -9832,7 +9832,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7a1ddc5-92f2-48e3-98e8-ac520dbf3bdf")
@@ -9844,7 +9844,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4531fad4-7f65-45ae-a2a4-1246518431ca")
@@ -10033,7 +10033,7 @@
 			(uuid "17da5fb8-47d9-430b-a5f3-358344a60438")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e7b4ff99-6db5-42a7-b173-96dd53ccf330")
 			(effects

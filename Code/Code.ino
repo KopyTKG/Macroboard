@@ -11,6 +11,10 @@
 
 // Switch LED diode based on the layout mode
 void checkMode(int layout) {
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(LEDs[i], LOW);
+  }
+
   if (layout == 1) {
     digitalWrite(LEDs[0], HIGH);
   }
@@ -74,12 +78,13 @@ void loop() {
       if (active && !keyStates[i][j]) {
 	      mode = tryModeSwitch(i, j, mode);
 	      // Use function keys if the layout is not the default
-        if (FunctionLayout[i][j] != 0x00 && mode > 0) { // Check if the key is not null
+        if (FunctionLayout[i][j] != 0x00 && mode > 0 && mode < 3) { // Check if the key is not null
 	        Keyboard.press(PrefixKeys[mode]);
           Keyboard.press(FunctionLayout[i][j]);
         }
 	      // Use numeric keys if the layout is the default
-        else if (DefaultLayout[i][j] != 0x00 && mode == 0) { // Check if the key is not null
+        else if (DefaultLayout[i][j] != 0x00 && (mode == 0 || mode == 3) ) { // Check if the key is not null
+          Keyboard.press(PrefixKeys[mode]); 
           Keyboard.press(DefaultLayout[i][j]);
         }
         keyStates[i][j] = true;
