@@ -20,7 +20,7 @@ static const char DefaultLayout[5][4] = {
 };
 
 static const char FunctionLayout[5][4] = {
-  {'-', '*', '/', MACRO_KEY}, 
+  {KEY_KP_MINUS, KEY_KP_ASTERISK, KEY_KP_SLASH, MACRO_KEY}, 
   {NOT_POPULATED, KEY_F14, KEY_F15, KEY_F13},
   {KEY_F24, KEY_F18, KEY_F17, KEY_F16}, 
   {NOT_POPULATED, KEY_F22, KEY_F21, KEY_F20},
