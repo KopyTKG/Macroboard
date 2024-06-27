@@ -5,7 +5,7 @@
 */
 
 // Pin configuration
-static const int columnPins[4] = {2, 4, 7, 8};
+static const int columnPins[4] = {8, 7, 4, 2};
 static const int rowPins[5] = {3, 5, 6, 9, 10};
 
 // LED pins
