@@ -12,11 +12,11 @@ static const char NOT_POPULATED = 0x00;
 
 
 static const char DefaultLayout[5][4] = {
-  {'-', '*', '/', MACRO_KEY}, 
-  {NOT_POPULATED, '9', '8', '7'}, 
-  {'+', '6', '5', '4'},
-  {NOT_POPULATED, '3', '2', '1'}, 
-  {KEY_RETURN, '.', NOT_POPULATED, '0'} 
+  {KEY_KP_MINUS, KEY_KP_ASTERISK, KEY_KP_SLASH, MACRO_KEY}, 
+  {NOT_POPULATED, KEY_KP_9, KEY_KP_8, KEY_KP_7}, 
+  {KEY_KP_PLUS, KEY_KP_6, KEY_KP_5, KEY_KP_4},
+  {NOT_POPULATED, KEY_KP_3, KEY_KP_2, KEY_KP_1}, 
+  {KEY_RETURN, KEY_KP_DOT , NOT_POPULATED, KEY_KP_0} 
 };
 
 static const char FunctionLayout[5][4] = {
