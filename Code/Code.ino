@@ -77,15 +77,9 @@ void loop() {
       bool active = digitalRead(columnPins[j]); // Active HIGH
       if (active && !keyStates[i][j]) {
 	      mode = tryModeSwitch(i, j, mode);
-	      // Use function keys if the layout is not the default
-        if (FunctionLayout[i][j] != 0x00 && mode > 0 && mode < 3) { // Check if the key is not null
-	        Keyboard.press(PrefixKeys[mode]);
-          Keyboard.press(FunctionLayout[i][j]);
-        }
-	      // Use numeric keys if the layout is the default
-        else if (DefaultLayout[i][j] != 0x00 && (mode == 0 || mode == 3) ) { // Check if the key is not null
+        if (Layout[i][j] != 0x00) { 
           Keyboard.press(PrefixKeys[mode]); 
-          Keyboard.press(DefaultLayout[i][j]);
+          Keyboard.press(Layout[i][j]);
         }
         keyStates[i][j] = true;
       } else if (!active && keyStates[i][j]) {
