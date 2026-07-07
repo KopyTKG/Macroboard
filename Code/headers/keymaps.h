@@ -1,35 +1,92 @@
 /*
- Created by: 	KopyTKG
- Date:		2024-06-20
- License:	CC0 v1.0
+ Created by:    KopyTKG
+ Rewritten:     2026-07-07
+ License:       CC0 v1.0
+
+ Layer keymaps for the Macroboard.
+
+ Every physical key is one KeyAction. The active layer is derived from two
+ states (see Code.ino): the macro toggle and NumLock.
+
+   macro off              -> LAYER_NUMBERS      (numpad; host decides digit/nav)
+   macro on  + NumLock on -> LAYER_MACRO_CTRL   (Ctrl + keys)
+   macro on  + NumLock off-> LAYER_MACRO_PLAIN  (plain keys, no Ctrl)
+
+ The NumLock key (NL) behaves like a real NumLock; holding it and tapping
+ MACRO_CHORD_CODE (the "/" key, see config.h) toggles the macro layer.
+
+ To add a layer: bump NUM_LAYERS and add another block to `layers`.
+ This table is deliberately plain data so it ports 1:1 to a future Pico build.
 */
 
 #ifndef KEYS_HEADER_H
 #define KEYS_HEADER_H
 
-static const char MACRO_KEY = 0x00;
-static const char NOT_POPULATED = 0x00;
+#include "config.h"
 
-
-static const char DefaultLayout[5][4] = {
-  {KEY_KP_MINUS, KEY_KP_ASTERISK, KEY_KP_SLASH, MACRO_KEY}, 
-  {NOT_POPULATED, KEY_KP_9, KEY_KP_8, KEY_KP_7}, 
-  {KEY_KP_PLUS, KEY_KP_6, KEY_KP_5, KEY_KP_4},
-  {NOT_POPULATED, KEY_KP_3, KEY_KP_2, KEY_KP_1}, 
-  {KEY_RETURN, KEY_KP_DOT , NOT_POPULATED, KEY_KP_0} 
+// ---- Action model ----------------------------------------------------------
+enum KeyType {
+  KT_NONE = 0,  // unpopulated position / do nothing
+  KT_KEY,       // send `code`, optionally with modifier `mod` held
+  KT_NUMLOCK    // tap = real NumLock; hold + MACRO_CHORD_CODE = toggle macros
 };
 
-static const char FunctionLayout[5][4] = {
-  {KEY_KP_MINUS, KEY_KP_ASTERISK, KEY_KP_SLASH, MACRO_KEY}, 
-  {NOT_POPULATED, KEY_F14, KEY_F15, KEY_F13},
-  {KEY_F24, KEY_F18, KEY_F17, KEY_F16}, 
-  {NOT_POPULATED, KEY_F22, KEY_F21, KEY_F20},
-  {KEY_RETURN, KEY_F23, NOT_POPULATED, KEY_F19}  
-};
+typedef struct {
+  uint8_t type;
+  uint8_t code;  // primary keycode  (KT_KEY)
+  uint8_t mod;   // modifier keycode (KT_KEY, 0 = none)
+} KeyAction;
 
+// ---- Shorthand for the tables ----------------------------------------------
+#define XX        { KT_NONE,    0x00, 0x00 }          // not populated
+#define KEY(c)    { KT_KEY,     (c),  0x00 }          // plain key
+#define KM(c, m)  { KT_KEY,     (c),  (m)  }          // key + held modifier
+#define NL        { KT_NUMLOCK, 0x00, 0x00 }          // NumLock (+chord = macros)
 
-static const char PrefixKeys[4] = {
- 0x00, KEY_LEFT_CTRL, KEY_LEFT_SHIFT, KEY_LEFT_ALT
+// Modifier held across the whole Ctrl layer. Change this one line to retarget
+// the layer (e.g. KEY_LEFT_SHIFT or KEY_LEFT_ALT).
+#define CTL       KEY_LEFT_CTRL
+
+// ---- Layers ----------------------------------------------------------------
+// NUM_LAYERS blocks of NUM_ROWS x NUM_COLS. Keep NL and the "/" chord key at
+// the same positions in every layer so switching works from anywhere. The
+// index defines below must match the block order.
+#define NUM_LAYERS         3
+#define LAYER_NUMBERS      0   // macro off  -> numpad (digits/nav via host)
+#define LAYER_MACRO_CTRL   1   // macro on,  NumLock on  -> Ctrl + keys
+#define LAYER_MACRO_PLAIN  2   // macro on,  NumLock off -> plain keys
+
+static const KeyAction layers[NUM_LAYERS][NUM_ROWS][NUM_COLS] = {
+
+  // Layer 0 — Numbers (macro off)
+  {
+    { KEY(KEYPAD_SUBTRACT), KEY(KEYPAD_MULTIPLY), KEY(KEYPAD_DIVIDE), NL            },
+    { XX,                KEY(KEYPAD_9),        KEY(KEYPAD_8),     KEY(KEYPAD_7) },
+    { KEY(KEYPAD_ADD),  KEY(KEYPAD_6),        KEY(KEYPAD_5),     KEY(KEYPAD_4) },
+    { XX,                KEY(KEYPAD_3),        KEY(KEYPAD_2),     KEY(KEYPAD_1) },
+    { KEY(KEY_RETURN),   KEY(KEYPAD_DOT),      XX,                KEY(KEYPAD_0) },
+  },
+
+  // Layer 1 — Macro + Ctrl (macro on, NumLock ON). The old "mode 1": every key
+  // is sent with Ctrl held, which is what the Discord / app bindings expect.
+  // Retarget the whole layer by changing CTL above.
+  {
+    { KM(KEYPAD_SUBTRACT, CTL), KM(KEYPAD_MULTIPLY, CTL), KM(KEYPAD_DIVIDE, CTL), NL             },
+    { XX,                    KM(KEY_F14, CTL),         KM(KEY_F15, CTL),      KM(KEY_F13, CTL) },
+    { KM(KEY_F24, CTL),      KM(KEY_F18, CTL),         KM(KEY_F17, CTL),      KM(KEY_F16, CTL) },
+    { XX,                    KM(KEY_F22, CTL),         KM(KEY_F21, CTL),      KM(KEY_F20, CTL) },
+    { KM(KEY_RETURN, CTL),   KM(KEY_F23, CTL),         XX,                    KM(KEY_F19, CTL) },
+  },
+
+  // Layer 2 — Macro plain (macro on, NumLock OFF). Same keys as layer 1 but
+  // with no modifier, so the host sees bare F13-F24 (and the raw operators).
+  {
+    { KEY(KEYPAD_SUBTRACT), KEY(KEYPAD_MULTIPLY), KEY(KEYPAD_DIVIDE), NL            },
+    { XX,                KEY(KEY_F14),         KEY(KEY_F15),      KEY(KEY_F13)  },
+    { KEY(KEY_F24),      KEY(KEY_F18),         KEY(KEY_F17),      KEY(KEY_F16)  },
+    { XX,                KEY(KEY_F22),         KEY(KEY_F21),      KEY(KEY_F20)  },
+    { KEY(KEY_RETURN),   KEY(KEY_F23),         XX,                KEY(KEY_F19)  },
+  },
 };
 
 #endif // KEYS_HEADER_H
