@@ -43,11 +43,11 @@ static bool numlockConsumed = false;  // this hold already fired the macro chord
 // Which keymap is live right now, from the two states above.
 uint8_t currentLayer() {
   if (!macroOn)  return LAYER_NUMBERS;
-  return numlockOn ? LAYER_MACRO_CTRL : LAYER_MACRO_PLAIN;
+  return numlockOn ? LAYER_MACRO_HILITE : LAYER_MACRO_PLAIN;
 }
 
 // Read the host's real NumLock LED state over USB and mirror it: drives the
-// NumLock indicator and feeds currentLayer()'s Ctrl/plain macro choice. Stays
+// NumLock indicator and feeds currentLayer()'s highlight/plain macro choice. Stays
 // correct even if NumLock is toggled from another keyboard.
 void serviceNumlockLed() {
   numlockOn = (BootKeyboard.getLeds() & LED_NUM_LOCK) != 0;

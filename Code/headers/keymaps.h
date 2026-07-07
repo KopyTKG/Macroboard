@@ -8,9 +8,9 @@
  Every physical key is one KeyAction. The active layer is derived from two
  states (see Code.ino): the macro toggle and NumLock.
 
-   macro off              -> LAYER_NUMBERS      (numpad; host decides digit/nav)
-   macro on  + NumLock on -> LAYER_MACRO_CTRL   (Ctrl + keys)
-   macro on  + NumLock off-> LAYER_MACRO_PLAIN  (plain keys, no Ctrl)
+   macro off              -> LAYER_NUMBERS        (numpad; host decides digit/nav)
+   macro on  + NumLock on -> LAYER_MACRO_HILITE   (highlight modifier + keys)
+   macro on  + NumLock off-> LAYER_MACRO_PLAIN    (plain keys, no modifier)
 
  The NumLock key (NL) behaves like a real NumLock; holding it and tapping
  MACRO_CHORD_CODE (the "/" key, see config.h) toggles the macro layer.
@@ -43,9 +43,11 @@ typedef struct {
 #define KM(c, m)  { KT_KEY,     (c),  (m)  }          // key + held modifier
 #define NL        { KT_NUMLOCK, 0x00, 0x00 }          // NumLock (+chord = macros)
 
-// Modifier held across the whole Ctrl layer. Change this one line to retarget
-// the layer (e.g. KEY_LEFT_SHIFT or KEY_LEFT_ALT).
-#define CTL       KEY_LEFT_CTRL
+// The "highlight" modifier held across the whole highlighted macro layer. Right
+// Alt is used instead of Left Ctrl because games/OS almost never bind it, so it
+// won't misfire in-game or trigger stray Ctrl-shortcuts. Change this one line to
+// retarget the layer (e.g. KEY_RIGHT_CTRL).
+#define HL        KEY_RIGHT_ALT
 
 // ---- Layers ----------------------------------------------------------------
 // NUM_LAYERS blocks of NUM_ROWS x NUM_COLS. Keep NL and the "/" chord key at
@@ -53,7 +55,7 @@ typedef struct {
 // index defines below must match the block order.
 #define NUM_LAYERS         3
 #define LAYER_NUMBERS      0   // macro off  -> numpad (digits/nav via host)
-#define LAYER_MACRO_CTRL   1   // macro on,  NumLock on  -> Ctrl + keys
+#define LAYER_MACRO_HILITE 1   // macro on,  NumLock on  -> highlight mod + keys
 #define LAYER_MACRO_PLAIN  2   // macro on,  NumLock off -> plain keys
 
 static const KeyAction layers[NUM_LAYERS][NUM_ROWS][NUM_COLS] = {
@@ -67,15 +69,16 @@ static const KeyAction layers[NUM_LAYERS][NUM_ROWS][NUM_COLS] = {
     { KEY(KEY_RETURN),   KEY(KEYPAD_DOT),      XX,                KEY(KEYPAD_0) },
   },
 
-  // Layer 1 — Macro + Ctrl (macro on, NumLock ON). The old "mode 1": every key
-  // is sent with Ctrl held, which is what the Discord / app bindings expect.
-  // Retarget the whole layer by changing CTL above.
+  // Layer 1 — Macro + highlight modifier (macro on, NumLock ON). The old
+  // "mode 1", but every key is sent with the HL modifier (Right Alt) held
+  // instead of Ctrl, which is what the Discord / app bindings expect without
+  // colliding with in-game Ctrl binds. Retarget the whole layer via HL above.
   {
-    { KM(KEYPAD_SUBTRACT, CTL), KM(KEYPAD_MULTIPLY, CTL), KM(KEYPAD_DIVIDE, CTL), NL             },
-    { XX,                    KM(KEY_F14, CTL),         KM(KEY_F15, CTL),      KM(KEY_F13, CTL) },
-    { KM(KEY_F24, CTL),      KM(KEY_F18, CTL),         KM(KEY_F17, CTL),      KM(KEY_F16, CTL) },
-    { XX,                    KM(KEY_F22, CTL),         KM(KEY_F21, CTL),      KM(KEY_F20, CTL) },
-    { KM(KEY_RETURN, CTL),   KM(KEY_F23, CTL),         XX,                    KM(KEY_F19, CTL) },
+    { KM(KEYPAD_SUBTRACT, HL), KM(KEYPAD_MULTIPLY, HL), KM(KEYPAD_DIVIDE, HL), NL            },
+    { XX,                   KM(KEY_F14, HL),         KM(KEY_F15, HL),      KM(KEY_F13, HL) },
+    { KM(KEY_F24, HL),      KM(KEY_F18, HL),         KM(KEY_F17, HL),      KM(KEY_F16, HL) },
+    { XX,                   KM(KEY_F22, HL),         KM(KEY_F21, HL),      KM(KEY_F20, HL) },
+    { KM(KEY_RETURN, HL),   KM(KEY_F23, HL),         XX,                   KM(KEY_F19, HL) },
   },
 
   // Layer 2 — Macro plain (macro on, NumLock OFF). Same keys as layer 1 but
