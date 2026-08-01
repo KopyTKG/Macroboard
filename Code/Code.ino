@@ -33,7 +33,8 @@ static KeyState keys[NUM_ROWS][NUM_COLS];
 
 // The active layer is derived from two independent states rather than stored.
 static bool macroOn = false;                 // macro layer engaged (NumLock + /)
-static bool numlockOn = NUMLOCK_ON_AT_BOOT;  // real host NumLock state (polled)
+static bool numlockOn = NUMLOCK_ON_AT_BOOT;  // latched NumLock belief (see serviceNumlockLed)
+static bool numlockSynced = false;           // host LED channel proven live this session
 
 // NumLock is a dual-function key: tap = real NumLock, hold + "/" = macro toggle.
 // We can't tell which until it is released, so we defer the decision.
@@ -46,12 +47,46 @@ uint8_t currentLayer() {
   return numlockOn ? LAYER_MACRO_HILITE : LAYER_MACRO_PLAIN;
 }
 
-// Read the host's real NumLock LED state over USB and mirror it: drives the
-// NumLock indicator and feeds currentLayer()'s highlight/plain macro choice. Stays
-// correct even if NumLock is toggled from another keyboard.
+// Read the host's real NumLock LED state over USB and latch it: drives the
+// NumLock indicator and feeds currentLayer()'s highlight/plain macro choice.
+//
+// The latch exists because an MCU reset (brown-out / flaky micro-USB) wipes the
+// host's cached LED state to 0, and the OS does NOT re-send it — a blind mirror
+// would then show NumLock "off" forever while the host is still on. So:
+//   - host bit SET  -> always real (a wiped cache reads 0, never a false 1):
+//                      adopt it and mark the channel proven live this session.
+//   - host bit CLEAR while synced -> a genuine host-off (e.g. toggled on another
+//                      keyboard): follow it.
+//   - host bit CLEAR before ever syncing -> possibly just a reset cache: hold the
+//                      latched belief (NUMLOCK_ON_AT_BOOT after a reset) instead
+//                      of dropping out.
+// The pad's own NumLock tap flips `numlockOn` directly (see onRelease), so it
+// still tracks correctly even in the pre-synced window.
 void serviceNumlockLed() {
-  numlockOn = (BootKeyboard.getLeds() & LED_NUM_LOCK) != 0;
+  bool host = (BootKeyboard.getLeds() & LED_NUM_LOCK) != 0;
+  if (host) {
+    numlockOn = true;
+    numlockSynced = true;
+  } else if (numlockSynced) {
+    numlockOn = false;
+  }
   digitalWrite(LEDs[LED_NUMLOCK], numlockOn ? HIGH : LOW);
+}
+
+// Boot/reset diagnostic. Runs once per MCU start: a distinctive triple-blink of
+// the NumLock LED. This ONLY fires when the chip (re)starts, so if you ever see
+// it flash on its own during normal use, the board is resetting (brown-out /
+// power dip / flaky micro-USB) — that reset wipes the host's cached NumLock LED
+// state to 0, and the OS does not re-send it, which is why the NumLock indicator
+// "drops out" while the OS still shows NumLock on. If the LED instead drops with
+// NO flash, the host itself reported NumLock off (an OS-side quirk, not a reset).
+void bootBlink() {
+  for (uint8_t i = 0; i < 3; i++) {
+    digitalWrite(LEDs[LED_NUMLOCK], HIGH);
+    delay(80);
+    digitalWrite(LEDs[LED_NUMLOCK], LOW);
+    delay(120);
+  }
 }
 
 // Macro LED blinks while the macro layer is active, off otherwise. Called every
@@ -102,10 +137,13 @@ void onRelease(uint8_t r, uint8_t c) {
   if (layers[currentLayer()][r][c].type == KT_NUMLOCK) {
     numlockHeld = false;
     if (!numlockConsumed) {
-      // Just toggle the host; serviceNumlockLed() picks up the new state and
-      // updates the LED + macro sub-layer on the next loop.
+      // A genuine tap: toggle the host and flip our belief immediately so the
+      // LED + macro sub-layer track even before the host's report arrives (and
+      // even in the pre-synced window right after a reset). serviceNumlockLed()
+      // reconciles with the host's report on the next loop.
       BootKeyboard.press(KEY_NUM_LOCK);
       BootKeyboard.release(KEY_NUM_LOCK);
+      numlockOn = !numlockOn;
     }
     numlockConsumed = false;
     return;
@@ -134,6 +172,8 @@ void setup() {
     pinMode(LEDs[i], OUTPUT);
     digitalWrite(LEDs[i], LOW);
   }
+
+  bootBlink();  // diagnostic: see bootBlink() — flags spurious resets
 
   BootKeyboard.begin();
   serviceNumlockLed();
